@@ -1,11 +1,23 @@
 import React from "react"
+import Home from "./Pages/Home"
+import CoinsCard from "./Components/CoinsCard"
+import CoinsDetails from "./Pages/CoinsDetails"
+import Notfound from "./Notfound"
+import { BrowserRouter,Routes,Route } from "react-router-dom"
 
 function App() {
   
 
   return (
     <>
-      <div className="bg-amber-900 py-2 text-white  ">Hello Rudra</div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home/>}></Route>
+          <Route path="/coincard" element={<CoinsCard/>}></Route>
+          <Route path="/coindetail" element={<CoinsDetails/>}></Route>
+          <Route path="*" element={<Notfound/>}></Route>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
