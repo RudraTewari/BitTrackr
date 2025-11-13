@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>}></Route>
           <Route path="/coincard" element={<CoinsCard/>}></Route>
-          <Route path="/coindetail" element={<CoinsDetails/>}></Route>
+          <Route path="/coin/:id" element={<CoinsDetails/>}></Route>
           <Route path="*" element={<Notfound/>}></Route>
         </Routes>
       </BrowserRouter>
